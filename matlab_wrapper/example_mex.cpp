@@ -7,8 +7,15 @@ class example
 public:
     example() { mexPrintf("Calling constructor\n"); }
     ~example() { mexPrintf("Calling destructor\n"); }
-    void train() { mexPrintf("Calling train\n"); };
-    void test() { mexPrintf("Calling test\n"); };
+    void train() { 
+        mexPrintf("Calling train\n"); 
+        mexPrintf("We have accessed the training function");
+    };
+    void test() {
+        double sample = mxCreateConstantArray(2);
+        double *y = mxGetPr(sample); 
+        mexPrintf("Calling test\n"); 
+        };
 private:
 };
 

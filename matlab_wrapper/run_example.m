@@ -8,7 +8,7 @@ if ~isequal(fileparts(which('example_mex')), dir)
     fprintf('Compiling example_mex\n');
     mex example_mex.cpp
 end
-
+mex example_mex.cpp
 % Use the example interface
 % This is the interface written specifically for the example class
 fprintf('Using the example interface\n');
