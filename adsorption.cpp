@@ -50,10 +50,10 @@ void Adsorption::activeSites(Lattice* lattice)
   }
 
 void Adsorption::setProcessMap( map< Process*, list<Site* >* >* procMap )
-  {
+{
   m_pProcessMap = procMap;
   (*m_pProcessMap)[ this] = &m_lAdsSites;
-  }
+}
 
 void Adsorption::selectSite()
   {

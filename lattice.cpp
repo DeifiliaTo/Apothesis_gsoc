@@ -41,7 +41,7 @@ void Lattice::build()
     EXIT;
     }
 
-  if ( m_iSizeX%2 != 0 || m_iSizeX%2 != 0){
+  if ( m_iSizeX%2 != 0 || m_iSizeY%2 != 0){
     cout << "The size of the lattice must be an even number in each direction." << endl;
     EXIT;
     }

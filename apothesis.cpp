@@ -105,6 +105,7 @@ void Apothesis::exec()
       cout <<m_vProcesses[0]->getName()<< " process is being started..." << endl;
     }
     
+  pIO->writeLogOutput("There are " + to_string (iterations) + " total iterations.");
   for ( int i = 0; i< iterations; i++)
     {
     
@@ -127,7 +128,7 @@ void Apothesis::exec()
     /// Select randomly a site
     m_vProcesses[ 0 ]->selectSite();
     /// Perform the process
-    m_vProcesses[ 0]->perform();
+    m_vProcesses[ 0 ]->perform();
 
     /// The frequency that the various information are written in the file
     /// must befined by the user. Fix it ...
